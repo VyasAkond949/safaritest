@@ -42,9 +42,6 @@ When(/^I switch to the iframe$/, async () => {
 
 Then(/^I enter the creds for signin$/, async () => {
     const email = '//input[@id="account_name_text_field"]';
-    await $(email).waitForExist({
-        timeout: 30000
-    });
     await $(email).setValue('mytestmail@mail.com');
     const submit = '//*[@id="sign-in"]'
     await $(submit).waitForExist({
